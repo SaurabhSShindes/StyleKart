@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account | StyleKart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="account-page">
+        <h1>My Account</h1>
+        <p>Manage your StyleKart account</p>
+
+        <div class="account-card">
+            <div class="account-avatar">
+                <i class="fa-solid fa-user"></i>
+            </div>
+
+            <h2 id="customerName"></h2>
+            <p id="customerEmail"></p>
+
+
+        <button type="button" id="editProfileBtn">
+            Edit Profile
+        </button>
+
+        <form id="editProfileForm" style="display:none; margin-top:25px;">
+
+            <label>Full Name</label>
+            <input type="text" id="editName" required>
+
+            <label>Email Address</label>
+            <input type="email" id="editEmail" required>
+
+            <button type="submit">Save Changes</button>
+
+            <button type="button" id="cancelEdit">
+                Cancel
+            </button>
+
+        </form>
+
+
+        <hr style="margin: 25px 0;">
+
+        <button type="button" id="changePasswordBtn">
+            Change Password
+        </button>
+
+        <form id="changePasswordForm" style="display:none; margin-top:25px;">
+
+            <label>Current Password</label>
+            <input type="password" id="currentPassword" required>
+
+            <label>New Password</label>
+            <input type="password" id="newPassword" minlength="6" required>
+
+            <label>Confirm New Password</label>
+            <input type="password" id="confirmPassword" minlength="6" required>
+
+            <button type="submit">Update Password</button>
+
+            <button type="button" id="cancelPassword">
+                Cancel
+            </button>
+
+        </form>
+
+
+
+            <button id="accountLogout">Logout</button>
+        </div>
+
+        <a href="index.html" class="back-home">← Back to Home</a>
+    </div>
+
+    <script src="account.js"></script>
+</body>
+</html>

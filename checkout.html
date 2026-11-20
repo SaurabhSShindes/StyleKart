@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout | StyleKart</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="top-bar">
+        Welcome to StyleKart - Your Fashion Destination!
+    </div>
+
+    <header class="header">
+        <div class="logo">StyleKart</div>
+
+        <a href="index.html" class="header-icon">
+            <i class="fa-solid fa-house"></i> Home
+        </a>
+    </header>
+
+    <main class="checkout-page">
+
+        <h1>Checkout</h1>
+        <p>Complete your order details below.</p>
+
+        <div class="checkout-container">
+
+            <section class="checkout-form">
+
+                <h2>Billing Details</h2>
+
+                <form id="checkoutForm">
+
+                    <label>Full Name</label>
+                    <input type="text" placeholder="Enter your full name" required>
+
+                    <label>Mobile Number</label>
+                    <input type="tel" placeholder="Enter mobile number"
+                    pattern="[0-9]{10}" maxlength="10" required>
+
+                    <label>Email Address</label>
+                    <input type="email" placeholder="Enter email address" required>
+
+                    <label>Full Address</label>
+                    <textarea placeholder="House no, Street, Area" required></textarea>
+
+                    <label>City</label>
+                    <input type="text" placeholder="Enter city" required>
+
+                    <label>PIN Code</label>
+                    <input type="text" pattern="[0-9]{6}"
+                    maxlength="6" placeholder="Enter PIN code" required>
+
+                    <button type="submit" class="checkout-btn">
+                        Place Order
+                    </button>
+
+                </form>
+
+            </section>
+
+            <section class="order-summary">
+
+                <h2>Order Summary</h2>
+
+                <div id="checkoutItems">
+                    Your order items will appear here.
+                </div>
+
+                <hr>
+
+                <h3>Total: ₹<span id="checkoutTotal">0</span></h3>
+
+            </section>
+
+        </div>
+
+    </main>
+
+    <script src="checkout.js"></script>
+
+</body>
+</html>
