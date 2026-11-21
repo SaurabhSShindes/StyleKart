@@ -1,0 +1,313 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Account | StyleKart</title>
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ACCOUNT PAGE -->
+
+    <div class="account-page">
+
+        <!-- PAGE HEADER -->
+
+        <div class="account-header">
+
+            <a href="index.html" class="account-logo">
+                STYLEKART<span>.</span>
+            </a>
+
+            <a href="index.html" class="account-home-link">
+                <i class="fa-solid fa-arrow-left"></i>
+                Continue Shopping
+            </a>
+
+        </div>
+
+
+        <!-- PROFILE HEADER -->
+
+        <section class="account-welcome">
+
+            <div class="account-profile-info">
+
+                <div class="account-avatar">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+                <div>
+                    <span class="account-small-title">
+                        MY STYLEKART ACCOUNT
+                    </span>
+
+                    <h1 id="customerName"></h1>
+
+                    <p id="customerEmail"></p>
+                </div>
+
+            </div>
+
+            <div class="account-welcome-text">
+                <p>Welcome back!</p>
+                <h2>Your Style. Your Account.</h2>
+            </div>
+
+        </section>
+
+
+        <!-- DASHBOARD -->
+
+        <section class="account-dashboard">
+
+            <div class="account-section-heading">
+                <div>
+                    
+                    <h2>My Dashboard</h2>
+                </div>
+            </div>
+
+            <div class="dashboard-stats">
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </div>
+
+                    <p>Total Orders</p>
+                    <h3 id="totalOrders">0</h3>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+
+                    <p>Pending Orders</p>
+                    <h3 id="pendingOrders">0</h3>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+
+                    <p>Delivered Orders</p>
+                    <h3 id="deliveredOrders">0</h3>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- MY ORDERS -->
+
+        <section class="account-content-section my-orders-section">
+
+            <div class="account-section-heading">
+                <div>
+                    <span>YOUR PURCHASES</span>
+                    <h2>
+                        <i class="fa-solid fa-box"></i>
+                        My Orders
+                    </h2>
+                </div>
+            </div>
+
+            <p class="account-section-description">
+                View and track your recent orders.
+            </p>
+
+            <div id="accountOrders"></div>
+
+        </section>
+
+
+        <!-- ADDRESS BOOK -->
+
+        <section class="account-content-section address-book-section">
+
+            <div class="account-section-heading">
+                <div>
+                    <span>DELIVERY DETAILS</span>
+                    <h2>
+                        <i class="fa-solid fa-location-dot"></i>
+                        My Addresses
+                    </h2>
+                </div>
+            </div>
+
+            <p class="account-section-description">
+                Manage your delivery addresses.
+            </p>
+
+            <button type="button" id="addAddressBtn">
+                <i class="fa-solid fa-plus"></i>
+                Add New Address
+            </button>
+
+            <form id="addressForm" style="display:none;">
+
+                <label>Full Name</label>
+                <input type="text" id="addressName" required>
+
+                <label>Mobile Number</label>
+                <input type="tel" id="addressMobile"
+                       pattern="[0-9]{10}" maxlength="10" required>
+
+                <label>Full Address</label>
+                <textarea id="addressText" required></textarea>
+
+                <label>City</label>
+                <input type="text" id="addressCity" required>
+
+                <label>PIN Code</label>
+                <input type="text" id="addressPincode"
+                       pattern="[0-9]{6}" maxlength="6" required>
+
+                <button type="submit" id="saveAddressBtn">
+                    Save Address
+                </button>
+
+                <button type="button" id="cancelAddressBtn">
+                    Cancel
+                </button>
+
+            </form>
+
+            <div id="savedAddresses"></div>
+
+        </section>
+
+
+        <!-- ACCOUNT SETTINGS -->
+
+        <section class="account-content-section account-settings">
+
+            <div class="account-section-heading">
+                <div>
+                    <span>PERSONAL INFORMATION</span>
+                    <h2>
+                        <i class="fa-solid fa-user-gear"></i>
+                        Account Settings
+                    </h2>
+                </div>
+            </div>
+
+
+            <!-- EDIT PROFILE -->
+
+            <div class="account-setting-item">
+
+                <div class="setting-item-info">
+                    <i class="fa-solid fa-user-pen"></i>
+
+                    <div>
+                        <h3>Personal Information</h3>
+                        <p>Update your name and email address.</p>
+                    </div>
+                </div>
+
+                <button type="button" id="editProfileBtn">
+                    Edit Profile
+                </button>
+
+            </div>
+
+            <form id="editProfileForm" style="display:none;">
+
+                <label>Full Name</label>
+                <input type="text" id="editName" required>
+
+                <label>Email Address</label>
+                <input type="email" id="editEmail" required>
+
+                <button type="submit">Save Changes</button>
+
+                <button type="button" id="cancelEdit">
+                    Cancel
+                </button>
+
+            </form>
+
+
+            <!-- CHANGE PASSWORD -->
+
+            <div class="account-setting-item">
+
+                <div class="setting-item-info">
+                    <i class="fa-solid fa-lock"></i>
+
+                    <div>
+                        <h3>Password & Security</h3>
+                        <p>Keep your account secure.</p>
+                    </div>
+                </div>
+
+                <button type="button" id="changePasswordBtn">
+                    Change Password
+                </button>
+
+            </div>
+
+            <form id="changePasswordForm"
+                  style="display:none;">
+
+                <label>Current Password</label>
+                <input type="password" id="currentPassword" required>
+
+                <label>New Password</label>
+                <input type="password" id="newPassword"
+                       minlength="6" required>
+
+                <label>Confirm New Password</label>
+                <input type="password" id="confirmPassword"
+                       minlength="6" required>
+
+                <button type="submit">Update Password</button>
+
+                <button type="button" id="cancelPassword">
+                    Cancel
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- LOGOUT -->
+
+        <div class="account-logout-section">
+
+            <button type="button" id="accountLogout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Logout
+            </button>
+
+        </div>
+
+
+        <!-- FOOTER -->
+
+        <div class="account-footer">
+            <p>© 2026 StyleKart. All Rights Reserved.</p>
+        </div>
+
+    </div>
+
+
+    <script src="account.js"></script>
+
+</body>
+</html>
