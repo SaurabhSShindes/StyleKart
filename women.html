@@ -1,0 +1,311 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Women's Fashion | StyleKart</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        Free Shipping on Orders Above ₹999
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+
+        <div class="logo">
+            Style<span>Kart.</span>
+        </div>
+
+        <nav class="navbar" id="navbar">
+            <a href="index.html">Home</a>
+            <a href="men.html">Men</a>
+            <a href="women.html#women-products" class="active">Women</a>
+            <a href="kids.html">Kids</a>
+            <a href="index.html#new-arrivals">New Arrivals</a>
+        </nav>
+
+        <div class="header-actions">
+
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search products...">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+
+            <div class="user-account" id="accountArea">
+                <a href="login.html">
+                    <i class="fa-solid fa-user"></i>
+                </a>
+            </div>
+
+            <a href="#" class="header-icon cart-icon"
+            id="cartToggle" aria-label="Shopping Cart">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span class="cart-count">0</span>
+            </a>
+
+            <button class="menu-btn" id="menuBtn"
+                    aria-label="Open menu" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+        </div>
+
+    </header>
+
+    <!-- Women's Hero Section -->
+    <section class="men-hero">
+
+        <div class="men-hero-content">
+            <p>STYLEKART WOMEN'S COLLECTION</p>
+            <h1>Discover Your Style</h1>
+            <span>Explore the latest trends in women's fashion.</span>
+            <a href="#women-products" class="shop-btn">Shop Now</a>
+        </div>
+
+    </section>
+
+   
+<!-- Women's Products -->
+<section class="products-section" id="women-products">
+
+    <div class="section-heading">
+        <p>WOMEN'S COLLECTION</p>
+        <h2>Shop Women's Fashion</h2>
+        <span>Find your perfect everyday style</span>
+    </div>
+
+    <div class="products-container">
+
+        <!-- Product 1 -->
+        <div class="product-card" onclick="openProductDetails('Elegant Summer Dress')">
+
+            <div class="product-image">
+                <img src="images/Summer Dress.png" alt="Elegant Summer Dress">
+            </div>
+
+            <div class="product-details">
+                <p class="category">Women's Clothing</p>
+                <h3>Elegant Summer Dress</h3>
+                <div class="price">₹1,199</div>
+
+                <button class="add-cart"
+                    onclick="event.stopPropagation()"
+                    data-name="Elegant Summer Dress"
+                    data-price="1199"
+                    data-image="images/Summer Dress.png">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card" onclick="openProductDetails('Floral Printed Top')">
+
+            <div class="product-image">
+                <img src="images/Floral Printed Top.jpg" alt="Floral Printed Top">
+            </div>
+
+            <div class="product-details">
+                <p class="category">Women's Clothing</p>
+                <h3>Floral Printed Top</h3>
+                <div class="price">₹899</div>
+
+                <button class="add-cart"
+                    onclick="event.stopPropagation()"
+                    data-name="Floral Printed Top"
+                    data-price="899"
+                    data-image="images/Floral Printed Top.jpg">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card" onclick="openProductDetails('Premium Handbag')">
+
+            <div class="product-image">
+                <img src="images/Handbag.jpg" alt="Premium Handbag">
+            </div>
+
+            <div class="product-details">
+                <p class="category">Women's Accessories</p>
+                <h3>Premium Handbag</h3>
+                <div class="price">₹999</div>
+
+                <button class="add-cart"
+                    onclick="event.stopPropagation()"
+                    data-name="Premium Handbag"
+                    data-price="999"
+                    data-image="images/Handbag.jpg">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card" onclick="openProductDetails('Stylish Shoulder Bag')">
+
+            <div class="product-image">
+                <img src="images/SHOULDER BAG.jpg" alt="Stylish Shoulder Bag">
+            </div>
+
+            <div class="product-details">
+                <p class="category">Women's Accessories</p>
+                <h3>Stylish Shoulder Bag</h3>
+                <div class="price">₹1,099</div>
+
+                <button class="add-cart"
+                    onclick="event.stopPropagation()"
+                    data-name="Stylish Shoulder Bag"
+                    data-price="1099"
+                    data-image="images/SHOULDER BAG.jpg">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+    <!-- Shopping Cart Panel -->
+    <div class="cart-panel" id="cartPanel">
+
+        <div class="cart-header">
+            <h2>My Shopping Cart</h2>
+            <button id="closeCart">&times;</button>
+        </div>
+
+        <div id="cartItems">
+            <p class="empty-cart">Your cart is empty!</p>
+        </div>
+
+        <div class="cart-footer">
+            <h3>Total: ₹<span id="cartTotal">0</span></h3>
+
+            <button class="checkout-btn"
+                onclick="window.location.href='checkout.html'">
+                Proceed to Checkout
+            </button>
+        </div>
+
+    </div>
+
+  <!-- FOOTER SECTION -->
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- ABOUT -->
+        <div class="footer-box">
+            <h2>StyleKart</h2>
+
+            <p>
+                Discover your own style with our latest
+                fashion collection. Shop your favourite
+                fashion products at StyleKart.
+            </p>
+
+            <div class="footer-social">
+                <a href="#" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+
+                <a href="#" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#" aria-label="YouTube">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+
+                <a href="#" aria-label="Twitter">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- QUICK LINKS -->
+        <div class="footer-box">
+            <h3>Quick Links</h3>
+
+            <a href="index.html">Home</a>
+            <a href="index.html#products">Featured Products</a>
+            <a href="index.html#new-arrivals">New Arrivals</a>
+            <a href="men.html">Men's Fashion</a>
+            <a href="women.html">Women's Fashion</a>
+            <a href="kids.html">Kids Collection</a>
+        </div>
+
+        <!-- CUSTOMER SERVICE -->
+        <div class="footer-box">
+            <h3>Customer Service</h3>
+
+            <a href="contact.html">Contact Us</a>
+            <a href="shipping-policy.html">Shipping Policy</a>
+            <a href="return-policy.html">Return Policy</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="footer-box">
+            <h3>Contact Information</h3>
+
+            <p>
+                <i class="fa-solid fa-envelope"></i>
+                <a href="mailto:support@stylekart.com">
+                    support@stylekart.com
+                </a>
+            </p>
+
+            <p>
+                <i class="fa-solid fa-phone"></i>
+                <a href="tel:+919307582707">
+                    +91 9307582707
+                </a>
+            </p>
+
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Ahmednagar, Maharashtra
+            </p>
+        </div>
+
+    </div>
+
+    <!-- PAYMENT METHODS -->
+    <div class="footer-payment">
+
+        <h3>We Accept</h3>
+
+        <div class="payment-icons">
+            <i class="fa-brands fa-cc-visa"></i>
+            <i class="fa-brands fa-cc-mastercard"></i>
+            <i class="fa-brands fa-google-pay"></i>
+            <i class="fa-solid fa-credit-card"></i>
+        </div>
+
+    </div>
+
+    <!-- COPYRIGHT -->
+    <div class="footer-bottom">
+        <p>© 2026 StyleKart. All Rights Reserved.</p>
+        <p>Designed with <i class="fa-solid fa-heart"></i> by StyleKart</p>
+    </div>
+
+</footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

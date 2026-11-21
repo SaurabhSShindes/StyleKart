@@ -1,0 +1,303 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Men's Fashion | StyleKart</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        Free Shipping on Orders Above ₹999
+    </div>
+
+    
+    <header class="header">
+
+        <div class="logo">
+            Style<span>Kart.</span>
+        </div>
+
+        <nav class="navbar" id="navbar">
+            <a href="index.html">Home</a>
+            <a href="men.html" class="active">Men</a>
+            <a href="women.html">Women</a>
+            <a href="kids.html">Kids</a>
+            <a href="index.html#new-arrivals">New Arrivals</a>
+        </nav>
+
+        <div class="header-actions">
+
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search products...">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+
+            <!-- <a href="login.html" class="header-icon" aria-label="Account">
+                <i class="fa-regular fa-user"></i>
+            </a> -->
+
+            <div class="user-account" id="accountArea">
+                <a href="login.html">
+                    <i class="fa-solid fa-user"></i>
+                </a>
+            </div>
+            
+            <a href="#" class="header-icon cart-icon"
+            id="cartToggle" aria-label="Shopping Cart">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span class="cart-count">0</span>
+            </a>
+
+            <button class="menu-btn" id="menuBtn"
+                    aria-label="Open menu" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- Men's Hero Section -->
+    <section class="men-hero">
+
+        <div class="men-hero-content">
+            <p>STYLEKART MEN'S COLLECTION</p>
+            <h1>Upgrade Your Style</h1>
+            <span>Discover the latest trends in men's fashion.</span>
+            <a href="#men-products" class="shop-btn">Shop Now</a>
+        </div>
+
+    </section>
+
+    <!-- Men's Products -->
+    <section class="products-section" id="men-products">
+
+        <div class="section-heading">
+            <p>MEN'S COLLECTION</p>
+            <h2>Shop Men's Fashion</h2>
+            <span>Find your perfect everyday style</span>
+        </div>
+
+        <div class="products-container">
+
+            <div class="product-card" onclick="openProductDetails('Men\'s Casual Cotton Shirt')">
+                <div class="product-image">
+                    <!-- <div class="image-placeholder">MEN'S SHIRT</div> -->
+                    <img src="images/shirt.jpg" alt="MEN'S SHIRT">
+
+                </div>
+                <div class="product-details">
+                    <p class="category">Men's Clothing</p>
+                    <h3>Casual Cotton Shirt</h3>
+                    <div class="price">₹799</div>
+                    <button class="add-cart"
+                        data-name="Men's Casual Cotton Shirt"
+                        data-price="799"
+                        data-image="">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card" onclick="openProductDetails('Men\'s Premium T-Shirt')">
+                <div class="product-image">
+                    <!-- <div class="image-placeholder">T-SHIRT</div> -->
+                    <img src="images/Premium T-Shirt.jpg" alt="T-SHIRT">
+                </div>
+                <div class="product-details">
+                    <p class="category">Men's Clothing</p>
+                    <h3>Premium T-Shirt</h3>
+                    <div class="price">₹599</div>
+                    <button class="add-cart"
+                        data-name="Men's Premium T-Shirt"
+                        data-price="599"
+                        data-image="">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card" onclick="openProductDetails('Men\'s Classic Blue Jeans')">
+                <div class="product-image">
+                    <!-- <div class="image-placeholder">JEANS</div> -->
+                      <img src="images/JEANS.jpg" alt="JEANS">
+                </div>
+                <div class="product-details">
+                    <p class="category">Men's Clothing</p>
+                    <h3>Classic Blue Jeans</h3>
+                    <div class="price">₹1,199</div>
+                    <button class="add-cart"
+                        data-name="Men's Classic Blue Jeans"
+                        data-price="1199"
+                        data-image="">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card" onclick="openProductDetails('Men\'s Casual Sneakers')">
+                <div class="product-image">
+                    <!-- <div class="image-placeholder">SHOES</div> -->
+                     <img src="images/Casual Sneakers.jpg" alt="SHOES">
+                     
+                </div>
+                <div class="product-details">
+                    <p class="category">Men's Footwear</p>
+                    <h3>Casual Sneakers</h3>
+                    <div class="price">₹1,499</div>
+                    <button class="add-cart"
+                        data-name="Men's Casual Sneakers"
+                        data-price="1499"
+                        data-image="">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Shopping Cart Panel -->
+    <div class="cart-panel" id="cartPanel">
+
+        <div class="cart-header">
+            <h2>My Shopping Cart</h2>
+            <button id="closeCart">&times;</button>
+        </div>
+
+        <div id="cartItems">
+            <p class="empty-cart">Your cart is empty!</p>
+        </div>
+
+        <div class="cart-footer">
+            <h3>Total: ₹<span id="cartTotal">0</span></h3>
+
+            <button class="checkout-btn"
+                onclick="window.location.href='checkout.html'">
+                Proceed to Checkout
+            </button>
+        </div>
+
+    </div>
+
+    <!-- FOOTER SECTION -->
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- ABOUT -->
+        <div class="footer-box">
+            <h2>StyleKart</h2>
+
+            <p>
+                Discover your own style with our latest
+                fashion collection. Shop your favourite
+                fashion products at StyleKart.
+            </p>
+
+            <div class="footer-social">
+                <a href="#" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+
+                <a href="#" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#" aria-label="YouTube">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+
+                <a href="#" aria-label="Twitter">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- QUICK LINKS -->
+        <div class="footer-box">
+            <h3>Quick Links</h3>
+
+            <a href="index.html">Home</a>
+            <a href="index.html#products">Featured Products</a>
+            <a href="index.html#new-arrivals">New Arrivals</a>
+            <a href="men.html">Men's Fashion</a>
+            <a href="women.html">Women's Fashion</a>
+            <a href="kids.html">Kids Collection</a>
+        </div>
+
+        <!-- CUSTOMER SERVICE -->
+        <div class="footer-box">
+            <h3>Customer Service</h3>
+
+            <a href="contact.html">Contact Us</a>
+            <a href="shipping-policy.html">Shipping Policy</a>
+            <a href="return-policy.html">Return Policy</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="footer-box">
+            <h3>Contact Information</h3>
+
+            <p>
+                <i class="fa-solid fa-envelope"></i>
+                <a href="mailto:support@stylekart.com">
+                    support@stylekart.com
+                </a>
+            </p>
+
+            <p>
+                <i class="fa-solid fa-phone"></i>
+                <a href="tel:+919307582707">
+                    +91 9307582707
+                </a>
+            </p>
+
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Ahmednagar, Maharashtra
+            </p>
+        </div>
+
+    </div>
+
+    <!-- PAYMENT METHODS -->
+    <div class="footer-payment">
+
+        <h3>We Accept</h3>
+
+        <div class="payment-icons">
+            <i class="fa-brands fa-cc-visa"></i>
+            <i class="fa-brands fa-cc-mastercard"></i>
+            <i class="fa-brands fa-google-pay"></i>
+            <i class="fa-solid fa-credit-card"></i>
+        </div>
+
+    </div>
+
+    <!-- COPYRIGHT -->
+    <div class="footer-bottom">
+        <p>© 2026 StyleKart. All Rights Reserved.</p>
+        <p>Designed with <i class="fa-solid fa-heart"></i> by StyleKart</p>
+    </div>
+
+</footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

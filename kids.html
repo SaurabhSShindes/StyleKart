@@ -1,0 +1,426 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kids Fashion | StyleKart</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        Free Shipping on Orders Above ₹999
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+
+        <div class="logo">
+            Style<span>Kart.</span>
+        </div>
+
+        <nav class="navbar" id="navbar">
+            <a href="index.html">Home</a>
+            <a href="men.html">Men</a>
+            <a href="women.html">Women</a>
+            <a href="kids.html" class="active">Kids</a>
+            <a href="index.html#new-arrivals">New Arrivals</a>
+        </nav>
+
+        <div class="header-actions">
+
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search products...">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+
+            <div class="user-account" id="accountArea">
+                <a href="login.html">
+                    <i class="fa-solid fa-user"></i>
+                </a>
+            </div>
+
+            <a href="#" class="header-icon cart-icon"
+            id="cartToggle" aria-label="Shopping Cart">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span class="cart-count">0</span>
+            </a>
+
+            <button class="menu-btn" id="menuBtn"
+                    aria-label="Open menu" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+        </div>
+
+    </header>
+
+    <!-- Kids Hero Section -->
+<section class="men-hero">
+    <div class="men-hero-content">
+
+        <h1>Kids Collection</h1>
+
+        <p>Discover Comfortable and Stylish Fashion for Kids</p>
+
+        <div class="kids-hero-buttons">
+
+            <a href="#boys-products" class="shop-btn">
+                Shop Boys
+            </a>
+
+            <a href="#girls-products" class="shop-btn">
+                Shop Girls
+            </a>
+
+        </div>
+
+    </div>
+</section>
+
+    <!-- BOYS COLLECTION -->
+    <section class="products-section" id="boys-products">
+
+        <div class="section-heading">
+            <p>BOYS COLLECTION</p>
+            <h2>Fashion for Boys</h2>
+            <span>Explore our latest boys fashion collection</span>
+        </div>
+
+        <div class="products-container">
+
+            <!-- Boys Product 1 -->
+            <div class="product-card"
+            onclick="openProductDetails('Boys T-Shirt')">
+
+                <div class="product-image">
+                    <img src="images/Boys T-Shirt.png" alt="Boys T-Shirt">
+                </div>
+
+                <div class="product-info">
+                    <h3>Boys T-Shirt</h3>
+                    <p>₹499</p>
+
+                    <button class="add-cart"
+                    data-name="Boys T-Shirt"
+                    data-price="499"
+                    data-image="images/Boys T-Shirt.png"
+                    onclick="event.stopPropagation()">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Boys Product 2 -->
+            <div class="product-card"
+            onclick="openProductDetails('Boys Jeans')">
+
+                <div class="product-image">
+                    <img src="images/Boys Jeans.png" alt="Boys Jeans">
+                </div>
+
+                <div class="product-info">
+                    <h3>Boys Jeans</h3>
+                    <p>₹699</p>
+
+                    <button class="add-cart"
+                    data-name="Boys Jeans"
+                    data-price="699"
+                    data-image="images/Boys Jeans.png"
+                    onclick="event.stopPropagation()">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Boys Product 3 -->
+            <div class="product-card"
+            onclick="openProductDetails('Boys Shirt')">
+
+                <div class="product-image">
+                    <img src="images/Boys Shirt.png" alt="Boys Shirt">
+                </div>
+
+                <div class="product-info">
+                    <h3>Boys Shirt</h3>
+                    <p>₹599</p>
+
+                    <button class="add-cart"
+                    data-name="Boys Shirt"
+                    data-price="599"
+                    data-image="images/Boys Shirt.png"
+                    onclick="event.stopPropagation()">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Boys Product 4 -->
+            <div class="product-card"
+            onclick="openProductDetails('Boys Sneakers')">
+
+                <div class="product-image">
+                    <img src="images/Boys Sneakers.png" alt="Boys Sneakers">
+                </div>
+
+                <div class="product-info">
+                    <h3>Boys Sneakers</h3>
+                    <p>₹999</p>
+
+                    <button class="add-cart"
+                    data-name="Boys Sneakers"
+                    data-price="999"
+                    data-image="images/Boys Sneakers.png"
+                    onclick="event.stopPropagation()">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- GIRLS COLLECTION -->
+    <section class="products-section" id="girls-products">
+
+        <div class="section-heading">
+            <p>GIRLS COLLECTION</p>
+            <h2>Fashion for Girls</h2>
+            <span>Explore our latest girls fashion collection</span>
+        </div>
+
+        <div class="products-container">
+
+            <!-- Girls Product 1 -->
+            <div class="product-card"
+            onclick="openProductDetails('Girls Dress')">
+
+                <div class="product-image">
+                    <img src="images/Girls Dress.png" alt="Girls Dress">
+                </div>
+
+                <div class="product-info">
+                    <h3>Girls Dress</h3>
+                    <p>₹799</p>
+
+                    <button class="add-cart"
+                    data-name="Girls Dress"
+                    data-price="799"
+                    data-image="images/Girls Dress.png"
+                    onclick="event.stopPropagation()">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Girls Product 2 -->
+            <div class="product-card"
+            onclick="openProductDetails('Girls Top')">
+
+                <div class="product-image">
+                    <img src="images/Girls Top.png" alt="Girls Top">
+                </div>
+
+                <div class="product-info">
+                    <h3>Girls Top</h3>
+                    <p>₹499</p>
+
+                    <button class="add-cart"
+                    data-name="Girls Top"
+                    data-price="499"
+                    data-image="images/Girls Top.png"
+                    onclick="event.stopPropagation()">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Girls Product 3 -->
+            <div class="product-card"
+            onclick="openProductDetails('Girls Skirt')">
+
+                <div class="product-image">
+                    <img src="images/Girls Skirt.png" alt="Girls Skirt">
+                </div>
+
+                <div class="product-info">
+                    <h3>Girls Skirt</h3>
+                    <p>₹599</p>
+
+                    <button class="add-cart"
+                    data-name="Girls Skirt"
+                    data-price="599"
+                    data-image="images/Girls Skirt.png"
+                    onclick="event.stopPropagation()">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Girls Product 4 -->
+            <div class="product-card"
+            onclick="openProductDetails('Girls Shoes')">
+
+                <div class="product-image">
+                    <img src="images/Girls Shoes.png" alt="Girls Shoes">
+                </div>
+
+                <div class="product-info">
+                    <h3>Girls Shoes</h3>
+                    <p>₹899</p>
+
+                    <button class="add-cart"
+                    data-name="Girls Shoes"
+                    data-price="899"
+                    data-image="images/Girls Shoes.png"
+                    onclick="event.stopPropagation()">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Shopping Cart Panel -->
+    <div class="cart-panel" id="cartPanel">
+
+        <div class="cart-header">
+            <h2>My Shopping Cart</h2>
+            <button id="closeCart">&times;</button>
+        </div>
+
+        <div id="cartItems">
+            <p class="empty-cart">Your cart is empty!</p>
+        </div>
+
+        <div class="cart-footer">
+            <h3>Total: ₹<span id="cartTotal">0</span></h3>
+
+            <button class="checkout-btn"
+                onclick="window.location.href='checkout.html'">
+                Proceed to Checkout
+            </button>
+        </div>
+
+    </div>
+
+
+   <!-- FOOTER SECTION -->
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- ABOUT -->
+        <div class="footer-box">
+            <h2>StyleKart</h2>
+
+            <p>
+                Discover your own style with our latest
+                fashion collection. Shop your favourite
+                fashion products at StyleKart.
+            </p>
+
+            <div class="footer-social">
+                <a href="#" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+
+                <a href="#" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#" aria-label="YouTube">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+
+                <a href="#" aria-label="Twitter">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- QUICK LINKS -->
+        <div class="footer-box">
+            <h3>Quick Links</h3>
+
+            <a href="index.html">Home</a>
+            <a href="index.html#products">Featured Products</a>
+            <a href="index.html#new-arrivals">New Arrivals</a>
+            <a href="men.html">Men's Fashion</a>
+            <a href="women.html">Women's Fashion</a>
+            <a href="kids.html">Kids Collection</a>
+        </div>
+
+        <!-- CUSTOMER SERVICE -->
+        <div class="footer-box">
+            <h3>Customer Service</h3>
+
+            <a href="contact.html">Contact Us</a>
+            <a href="shipping-policy.html">Shipping Policy</a>
+            <a href="return-policy.html">Return Policy</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="footer-box">
+            <h3>Contact Information</h3>
+
+            <p>
+                <i class="fa-solid fa-envelope"></i>
+                <a href="mailto:support@stylekart.com">
+                    support@stylekart.com
+                </a>
+            </p>
+
+            <p>
+                <i class="fa-solid fa-phone"></i>
+                <a href="tel:+919307582707">
+                    +91 9307582707
+                </a>
+            </p>
+
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Ahmednagar, Maharashtra
+            </p>
+        </div>
+
+    </div>
+
+    <!-- PAYMENT METHODS -->
+    <div class="footer-payment">
+
+        <h3>We Accept</h3>
+
+        <div class="payment-icons">
+            <i class="fa-brands fa-cc-visa"></i>
+            <i class="fa-brands fa-cc-mastercard"></i>
+            <i class="fa-brands fa-google-pay"></i>
+            <i class="fa-solid fa-credit-card"></i>
+        </div>
+
+    </div>
+
+    <!-- COPYRIGHT -->
+    <div class="footer-bottom">
+        <p>© 2026 StyleKart. All Rights Reserved.</p>
+        <p>Designed with <i class="fa-solid fa-heart"></i> by StyleKart</p>
+    </div>
+
+</footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
